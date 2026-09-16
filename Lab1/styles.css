@@ -1,4 +1,77 @@
+:root {
+  color-scheme: light;
+  --background-color: #ffffff;
+  --text-color: #1f2937;
+  --surface-color: #e5e7eb;
+  --heading-color: #0000ee;
+  --button-background: #f3f4f6;
+  --button-text-color: #111827;
+}
+
+body.dark-theme {
+  color-scheme: dark;
+  --background-color: #111827;
+  --text-color: #f3f4f6;
+  --surface-color: #374151;
+  --heading-color: #93c5fd;
+  --button-background: #4b5563;
+  --button-text-color: #ffffff;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0 20px 40px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
 h1 {
-    color: blue;
-    background-color: lightgray;
+  color: var(--heading-color);
+  background-color: var(--surface-color);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 16px 0;
+  border-radius: 6px;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--heading-color);
+  outline-offset: 2px;
+}
+
+.info-block {
+  background-color: var(--surface-color);
+  padding: 16px;
+  border-radius: 6px;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    width: 100%;
+  }
 }
